@@ -9,3 +9,5 @@ The website showcases:
 - Contact / Feedback form
 - Interactive features using JavaScript
 - Feedback storage using Local Storage
+
+Author - Diksha Shah
