@@ -53,48 +53,6 @@ section {
     margin: auto;
     text-align: center;
 }
-    /* ===== NAVIGATION CAPSULE ===== */
-header {
-    position: sticky;
-    top: 20px;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-
-    .nav-container {
-    position: relative;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 60px;
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 10px 30px rgba(0,113,227,0.15);
-}
-    .nav-indicator {
-    position: absolute;
-    height: 42px;
-    border-radius: 50px;
-    background: linear-gradient(135deg,#0071e3,#5ac8fa);
-    box-shadow: 0 8px 20px rgba(0,113,227,0.4);
-    transition: all 0.4s cubic-bezier(.25,.8,.25,1);
-    top: 9px;
-    left: 0;
-    width: 0;
-    z-index: 0;
-}
-    .nav-link {
-    position: relative;
-    padding: 10px 22px;
-    border-radius: 50px;
-    font-weight: 600;
-    color: #1d1d1f;
-    text-decoration: none;
-    transition: 0.3s ease;
-    z-index: 1;
-}
-
-.nav-link.active { color: white; }
 
 h1 {
     font-size: 56px;
@@ -175,44 +133,29 @@ button:hover {
     transform: translateY(-3px);
 }
 
-    /* ===== SKILLS ===== */
+/* ===== SKILLS ===== */
 .skills-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 25px;
 }
+
 .skill {
-    padding: 15px 30px;
+    background: white;
+    border: 1px solid #e5e5e7;
+    padding: 18px 35px;
     border-radius: 40px;
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.6);
-    font-weight: 600;
+    font-weight: 700;
     transition: 0.4s ease;
-    position: relative;
-    overflow: hidden;
 }
-
-.skill::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-    transition: 0.7s;
-}
-
-.skill:hover::after { left: 100%; }
 
 .skill:hover {
-    transform: translateY(-5px);
-    background: rgba(0,113,227,0.6);
+    background: #0071e3;
     color: white;
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
-
 
 /* ===== PROJECTS ===== */
 .project-container {
@@ -294,19 +237,13 @@ footer {
 <div class="bubble b2"></div>
 <div class="bubble b3"></div>
 
-
-<div class="bubble b1"></div>
-<div class="bubble b2"></div>
-<div class="bubble b3"></div>
-
 <header>
-    <div class="nav-container">
-        <div class="nav-indicator"></div>
-        <a href="#about" class="nav-link active">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <section id="about" class="fade-in">
@@ -422,6 +359,3 @@ document.getElementById("feedbackForm")
 
 </body>
 </html>
-
-
-
